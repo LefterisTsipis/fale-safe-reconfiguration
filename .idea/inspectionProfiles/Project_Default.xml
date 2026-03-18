@@ -1,0 +1,59 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="428" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="9">
+            <item index="0" class="java.lang.String" itemvalue="paho-mqtt" />
+            <item index="1" class="java.lang.String" itemvalue="mysql" />
+            <item index="2" class="java.lang.String" itemvalue="flask" />
+            <item index="3" class="java.lang.String" itemvalue="mysql-connector-python" />
+            <item index="4" class="java.lang.String" itemvalue="numba" />
+            <item index="5" class="java.lang.String" itemvalue="tensorflow" />
+            <item index="6" class="java.lang.String" itemvalue="deactivateabsl-py" />
+            <item index="7" class="java.lang.String" itemvalue="llvmlite" />
+            <item index="8" class="java.lang.String" itemvalue="tensorflow-intel" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="E128" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingNamesInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="demo.demo_api.views.organisation_view.demo_api" />
+          <option value="demo.demo_api.models.staff_member._" />
+          <option value="demo.demo_api.models.organization_operating_hours._" />
+          <option value="demo.demo_api.models.organisation.OrganizationOperatingHours" />
+          <option value="demo.demo_api.serializers.admin_member_serializer.AdminMember" />
+          <option value="demo.demo_api.urls.demo_api" />
+          <option value="models.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
