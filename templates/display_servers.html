@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Servers</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,24 +83,25 @@
 
     <script>
         $(document).ready(function() {
-            // Handle the button click event
             $('.compromise-button').on('click', function() {
-                const serverId = $(this).data('id');  // Correct usage of .data('id')
+                const serverId = $(this).data('id');
                 console.log('Server ID:', serverId);
+
                 $.ajax({
-                    url: '{% url "block_compromised_host" %}', // Update this to the correct URL name for reporting
+                    url: '{% url "block_compromised_host" %}',
                     type: 'POST',
                     data: {
-                        'compromised_server': serverId,
-                        'csrfmiddlewaretoken': '{{ csrf_token }}' // Include CSRF token for security
+                        compromised_server: serverId,
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
                     },
                     success: function(response) {
-
-                        console.log(response.message);
-                         window.location.href = '/sdn_applicatrion/ui/rules/'; // Redirect to admin panel
+                        alert(`Success: ${response.message}`); // Show success message
+                            window.location.href = '/sdn_app/api/rules'; // Redirect to admin panel
                     },
                     error: function(xhr, status, error) {
-                        console.error(error);
+                        console.error("status:", xhr.status);
+                        console.error("response:", xhr.responseText);
+                        console.error("error:", error);
                     }
                 });
             });

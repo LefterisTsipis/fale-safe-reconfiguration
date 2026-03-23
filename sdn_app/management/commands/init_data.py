@@ -49,7 +49,7 @@ def init_data(self):
     if not OpenDayLight.objects.filter(username=username).exists():
 
         OpenDayLight.objects.create(
-            ip='195.251.134.247',
+            ip='195.251.134.77',
             port=8181,
             username=username,
             password=password
